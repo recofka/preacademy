@@ -1,0 +1,337 @@
+/* variables*/
+:root {
+--purple-dark: #543e5c;
+--purple-ligth: #c3b4d2;
+--purple-medium: #dcaee8;
+--pink-light: #ea9085;
+--primary-light: #fff0f8;
+--white: #F8F8FA;
+--grey-bar: #cdcdcd;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
+/*------Menu------*/
+nav, footer {
+	background-color: var(--purple-dark);
+}
+
+.menu {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+.menu ul {
+	display: flex;
+	justify-content: flex-end;
+	padding:0 15px;
+	margin:0px;  
+	list-style:none; 
+}
+
+.menu ul li { 
+	display: inline; 
+}
+
+.menu ul li a {
+	padding: 12px 10px;
+	display: inline-block;
+	/* visual link */   
+	text-decoration: none; 
+	font-size: 1.2em;  
+	color: var(--primary-light);
+}
+
+.menu ul li a:hover{
+	color: var(--purple-medium);
+	
+}
+
+/*------Home------*/
+.aboutme{
+	background: url(img/background.svg);
+	padding: 4em;
+	color: var(--purple-dark);
+}
+
+.avatar img{
+	display: block;
+	margin: auto;
+	max-width: 350px;
+	border-radius:15%;
+	animation: tada 2s linear ;
+	-moz-box-shadow:    3px 3px 5px 6px #fff;
+	-webkit-box-shadow: 3px 3px 5px 6px #fff;
+	box-shadow:         3px 3px 5px 6px #fff;
+}
+
+/*------Itensme------*/
+.itensme{
+	padding-bottom: 4em;
+	padding-top: 2em;
+	color: var(--purple-dark);
+}
+
+.images img {
+	height: 220px;
+	width: 300px;
+	-moz-box-shadow:    3px 3px 5px 6px #fff;
+	-webkit-box-shadow: 3px 3px 5px 6px #fff;
+	box-shadow:         3px 3px 5px 6px #fff;
+}
+
+
+.hover{
+	display: inline-block;
+	position: relative;
+}
+
+.hover h3{
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	width: 100%;
+}
+
+.hover:hover h3{
+ display: block;
+}
+
+/*------Contact me------*/
+.contact{
+	background-color: #c3b4d2;
+}
+
+.contact ul {
+	display: flex;
+	justify-content: center;
+	padding:0px;
+	margin:0px;  
+	list-style:none; 
+}
+
+.contact ul li { 
+	display: inline; 
+}
+
+.contact ul li a {
+	padding: 6px 6px;
+	display: inline-block;
+/* visual link */   
+	text-decoration: none;
+}
+
+.contact{
+	padding: 4em;
+	color: var(--purple-dark)
+}
+
+.contact-icons li{
+	padding: 1em;
+	margin-top: 1em;
+
+}
+
+.contact-icons a{
+	text-decoration: none; 
+	color: var(--white);
+}
+
+.contact-icons a:hover {
+	color: var(--purple-dark);
+	transform: scale(2);
+}
+
+/*------Footer------*/
+footer {
+margin-bottom: 0;
+padding-bottom: 0
+
+}
+
+footer h3{
+padding: 1em;
+font-size: 1em;  
+margin-bottom: 0px;
+color: var(--primary-light);
+
+}
+
+
+/*------Animations------*/
+.star img{
+width: 15px;
+height: 15px;
+animation: star 3s linear infinite;
+}
+
+@keyframes star {
+0%   {transform: rotate(0deg);}
+10%  {transform: rotate(35deg);}
+20%  {transform: rotate(72deg);}
+30%  {transform: rotate(108deg);}
+40% {transform: rotate(144deg);}
+50% {transform: rotate(180deg);}
+60% {transform: rotate(216deg);}
+70% {transform: rotate(252deg);}
+80% {transform: rotate(288deg);}
+90% {transform: rotate(324deg);}
+100% {transform: rotate(360deg);}
+}
+@keyframes tada {
+from {
+-webkit-transform: scale3d(1, 1, 1);
+transform: scale3d(1, 1, 1);
+}
+
+10%,
+20% {
+-webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+}
+
+30%,
+50%,
+70%,
+90% {
+-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+}
+
+40%,
+60%,
+80% {
+-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+}
+
+to {
+-webkit-transform: scale3d(1, 1, 1);
+transform: scale3d(1, 1, 1);
+}
+}
+
+.tada {
+-webkit-animation-name: tada;
+animation-name: tada;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes wobble {
+from {
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+
+15% {
+-webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+}
+
+30% {
+-webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+}
+
+45% {
+-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+}
+
+60% {
+-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+}
+
+75% {
+-webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+}
+
+to {
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+}
+ 
+
+
+/*-------------------bounceOut--------------------*/
+@-webkit-keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%,
+  55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%,
+  55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+.bounceOut {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceOut;
+  animation-name: bounceOut;
+}
+
+@-webkit-keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+/*-----------------------------------*/
